@@ -8,16 +8,14 @@
 </head>
 <body>
 
-<!-- AUTH SECTION -->
 <div id="auth-section">
 
-    <!-- Image en haut -->
+    <!-- Logo en haut -->
     <img src="https://via.placeholder.com/150?text=💰" alt="Logo Manager Invest" class="logo">
 
-    <!-- Formulaire encadré -->
     <div class="form-container">
 
-        <!-- Formulaire Inscription -->
+        <!-- Inscription -->
         <div id="signup-form">
             <h1>Inscription</h1>
             <input type="text" id="name" placeholder="Nom">
@@ -25,12 +23,11 @@
             <input type="text" id="code" placeholder="Code Pays">
             <input type="email" id="email" placeholder="Email">
             <input type="password" id="password" placeholder="Mot de passe">
-            <input type="text" id="referral" placeholder="Code parrain (facultatif)">
             <button onclick="signup()">S'inscrire</button>
             <p>Déjà un compte ? <span onclick="showLogin()">Connectez-vous</span></p>
         </div>
 
-        <!-- Formulaire Connexion -->
+        <!-- Connexion -->
         <div id="login-form" style="display:none;">
             <h1>Connexion</h1>
             <input type="email" id="login-email" placeholder="Email">
@@ -42,54 +39,29 @@
     </div>
 </div>
 
-<!-- DASHBOARD -->
+<!-- Dashboard -->
 <div id="dashboard" style="display:none;">
     <header>
         <h2>Bienvenue, <span id="user-name"></span></h2>
         <div>Solde : <span id="solde">0</span></div>
-        <div>Bonus disponible : <span id="bonus">0</span></div>
+        <div>Bonus : <span id="bonus">0</span></div>
         <button onclick="recharge()">Recharge</button>
         <button onclick="retrait()">Retrait</button>
     </header>
 
-    <!-- Plans -->
     <section id="plans">
-        <h2>Plans d’Investissement</h2>
-
+        <h2>Plans d'investissement</h2>
         <div class="plan" data-montant="3000" data-revenu="699" data-duree="30">
             <img src="https://via.placeholder.com/80?text=👩‍💼" alt="Plan 1" class="plan-image">
             <h3>Plan 1</h3>
-            <p>Montant investi : 3 000</p>
+            <p>Montant : 3 000</p>
             <p>Revenu quotidien : 699</p>
             <p>Durée : 30 jours</p>
-            <p>Revenu total : 20 970</p>
             <button onclick="invest(this)">Investir</button>
         </div>
-
-        <div class="plan" data-montant="5000" data-revenu="1165" data-duree="30">
-            <img src="https://via.placeholder.com/80?text=🎀" alt="Plan 2" class="plan-image">
-            <h3>Plan 2</h3>
-            <p>Montant investi : 5 000</p>
-            <p>Revenu quotidien : 1 165</p>
-            <p>Durée : 30 jours</p>
-            <p>Revenu total : 34 950</p>
-            <button onclick="invest(this)">Investir</button>
-        </div>
-
-        <div class="plan" data-montant="10000" data-revenu="2330" data-duree="30">
-            <img src="https://via.placeholder.com/80?text=🌟" alt="Plan 3" class="plan-image">
-            <h3>Plan 3</h3>
-            <p>Montant investi : 10 000</p>
-            <p>Revenu quotidien : 2 330</p>
-            <p>Durée : 30 jours</p>
-            <p>Revenu total : 69 900</p>
-            <button onclick="invest(this)">Investir</button>
-        </div>
-
-        <!-- Ajouter les autres plans de la même manière -->
+        <!-- Ajouter les autres plans -->
     </section>
 
-    <!-- Mes Produits / Investissements -->
     <section id="my-products">
         <h2>Mes Produits</h2>
         <div id="investments-container"></div>
